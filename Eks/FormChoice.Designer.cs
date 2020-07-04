@@ -28,35 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonManager = new System.Windows.Forms.Button();
+            this.buttonBuyer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonManager
             // 
-            this.button1.Location = new System.Drawing.Point(27, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 73);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Менеджер";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(213)))), ((int)(((byte)(202)))));
+            this.buttonManager.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonManager.Location = new System.Drawing.Point(27, 130);
+            this.buttonManager.Name = "buttonManager";
+            this.buttonManager.Size = new System.Drawing.Size(151, 73);
+            this.buttonManager.TabIndex = 0;
+            this.buttonManager.Text = "Менеджер";
+            this.buttonManager.UseVisualStyleBackColor = false;
+            this.buttonManager.Click += new System.EventHandler(this.buttonManager_Click);
             // 
-            // button2
+            // buttonBuyer
             // 
-            this.button2.Location = new System.Drawing.Point(264, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 73);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Покупатель";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonBuyer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(213)))), ((int)(((byte)(202)))));
+            this.buttonBuyer.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBuyer.Location = new System.Drawing.Point(264, 130);
+            this.buttonBuyer.Name = "buttonBuyer";
+            this.buttonBuyer.Size = new System.Drawing.Size(151, 73);
+            this.buttonBuyer.TabIndex = 1;
+            this.buttonBuyer.Text = "Покупатель";
+            this.buttonBuyer.UseVisualStyleBackColor = false;
+            this.buttonBuyer.Click += new System.EventHandler(this.buttonBuyer_Click);
             // 
             // FormChoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(175)))));
             this.ClientSize = new System.Drawing.Size(459, 353);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonBuyer);
+            this.Controls.Add(this.buttonManager);
             this.Name = "FormChoice";
             this.Text = "FormChoice";
             this.ResumeLayout(false);
@@ -65,7 +72,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonManager;
+        private System.Windows.Forms.Button buttonBuyer;
     }
 }

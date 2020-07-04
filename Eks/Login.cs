@@ -18,5 +18,7 @@ namespace Eks
         public string Login1 { get; set; }
         public string Password { get; set; }
         public string Type { get; set; }
+    
+        public virtual Registr Registr { get; set; }
     }
 }

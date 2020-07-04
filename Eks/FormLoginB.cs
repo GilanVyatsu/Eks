@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace Eks
 {
-    public partial class FormLogin : Form
+    public partial class FormLoginB : Form
     {
-        public struct managers
+        public struct buyers
         {
             public string Login;
             public string Password;
-            public string Type;
         }
-        public static Login login = new Login();
-        public FormLogin()
+        public FormLoginB()
         {
             InitializeComponent();
-            if (FormLogin.login.Login1 == "Managers") buttonLogin.Enabled = false;
+            if (FormLogin.login.Login1 == "Buyers") buttonLogin.Enabled = false;
             labelWelcom.Text = "Добро пожаловать!" + FormLogin.login.Login1;
         }
+
+        private void buttonRegistr_Click(object sender, EventArgs e)
+        {
+            Form registr = new FormRegistr();
+            registr.Show();
+        }
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             if (textBoxLogin.Text == "" && textBoxPassword.Text == "")
@@ -42,7 +47,6 @@ namespace Eks
                         key = true;
                         login.Login1 = login.Login1;
                         login.Password = login.Password;
-                        login.Type = login.Type;
                     }
                     if (!key)
                     {
@@ -59,6 +63,4 @@ namespace Eks
                     }
                 }
             }
-        }
-    }
-}
+        } }}

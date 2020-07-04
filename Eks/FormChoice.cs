@@ -16,5 +16,17 @@ namespace Eks
         {
             InitializeComponent();
         }
+
+        private void buttonManager_Click(object sender, EventArgs e)
+        {
+            Form manager = new FormLogin();
+            manager.Show();
+        }
+
+        private void buttonBuyer_Click(object sender, EventArgs e)
+        {
+            Form loginB = new FormLoginB();
+            loginB.Show();
+        }
     }
 }

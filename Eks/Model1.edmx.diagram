@@ -4,15 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eeadf61f40ac4fee8150fd28d3a14caf" Name="Diagram1">
+      <Diagram DiagramId="8e562d094670427e8818e7ed141a21c8" Name="Diagram1">
         <EntityTypeShape EntityType="EksModel.Auto" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="EksModel.Buyer" Width="1.5" PointX="1.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="EksModel.Login" Width="1.5" PointX="8.125" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EksModel.Buyer" Width="1.5" PointX="0.625" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EksModel.Login" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="EksModel.main" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="EksModel.Managers" Width="1.5" PointX="4.875" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EksModel.Registr" Width="1.5" PointX="8.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EksModel.Managers" Width="1.5" PointX="4.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EksModel.Registr" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="EksModel.FK_main_Auto" ManuallyRouted="false" />
         <AssociationConnector Association="EksModel.FK_main_Buyer" ManuallyRouted="false" />
+        <AssociationConnector Association="EksModel.FK_Registr_Login" ManuallyRouted="false" />
         <AssociationConnector Association="EksModel.FK_main_Managers" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

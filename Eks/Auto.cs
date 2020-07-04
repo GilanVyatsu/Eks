@@ -18,7 +18,7 @@ namespace Eks
         public string idAuto { get; set; }
         public string Model { get; set; }
         public Nullable<int> Color { get; set; }
-        public Nullable<int> Price { get; set; }
+        public string Price { get; set; }
         public string Number { get; set; }
         public Nullable<System.DateTime> Release { get; set; }
     

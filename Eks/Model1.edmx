@@ -13,7 +13,7 @@
           <Property Name="idAuto" Type="nvarchar(max)" />
           <Property Name="Model" Type="nvarchar(max)" />
           <Property Name="Color" Type="int" />
-          <Property Name="Price" Type="int" />
+          <Property Name="Price" Type="nvarchar(max)" />
           <Property Name="Number" Type="nvarchar(max)" />
           <Property Name="Release" Type="datetime" />
         </EntityType>
@@ -105,6 +105,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Registr_Login">
+          <End Role="Login" Type="Self.Login" Multiplicity="1" />
+          <End Role="Registr" Type="Self.Registr" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Registr">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Хранилище EksModelContainer">
           <EntitySet Name="Auto" EntityType="Self.Auto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Buyer" EntityType="Self.Buyer" Schema="dbo" store:Type="Tables" />
@@ -124,6 +136,10 @@
             <End Role="Managers" EntitySet="Managers" />
             <End Role="main" EntitySet="main" />
           </AssociationSet>
+          <AssociationSet Name="FK_Registr_Login" Association="Self.FK_Registr_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Registr" EntitySet="Registr" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -138,7 +154,7 @@
           <Property Name="idAuto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Color" Type="Int32" />
-          <Property Name="Price" Type="Int32" />
+          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Release" Type="DateTime" Precision="3" />
           <NavigationProperty Name="main" Relationship="Self.FK_main_Auto" FromRole="Auto" ToRole="main" />
@@ -166,6 +182,7 @@
           <Property Name="Login1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Registr" Relationship="Self.FK_Registr_Login" FromRole="Login" ToRole="Registr" />
         </EntityType>
         <EntityType Name="main">
           <Key>
@@ -199,6 +216,7 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Login1" Relationship="Self.FK_Registr_Login" FromRole="Registr" ToRole="Login" />
         </EntityType>
         <Association Name="FK_main_Auto">
           <End Role="Auto" Type="Self.Auto" Multiplicity="1" />
@@ -220,6 +238,18 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="main">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Registr_Login">
+          <End Role="Login" Type="Self.Login" Multiplicity="1" />
+          <End Role="Registr" Type="Self.Registr" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Registr">
               <PropertyRef Name="id" />
             </Dependent>
           </ReferentialConstraint>
@@ -250,6 +280,10 @@
           <AssociationSet Name="FK_main_Buyer" Association="Self.FK_main_Buyer">
             <End Role="Buyer" EntitySet="Buyer" />
             <End Role="main" EntitySet="main" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Registr_Login" Association="Self.FK_Registr_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Registr" EntitySet="Registr" />
           </AssociationSet>
           <AssociationSet Name="FK_main_Managers" Association="Self.FK_main_Managers">
             <End Role="Managers" EntitySet="Managers" />

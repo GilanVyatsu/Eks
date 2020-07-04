@@ -17,5 +17,7 @@ namespace Eks
         public int id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+    
+        public virtual Login Login1 { get; set; }
     }
 }
