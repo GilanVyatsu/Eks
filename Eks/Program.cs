@@ -8,7 +8,7 @@ namespace Eks
 {
     static class Program
     {
-        public static EksEntities1 eks = new EksEntities1();
+        public static EksEntities eks = new EksEntities();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -17,7 +17,7 @@ namespace Eks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new FormChoice());
         }
     }
 }

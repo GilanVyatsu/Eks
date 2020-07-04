@@ -13,10 +13,10 @@ namespace Eks
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EksEntities1 : DbContext
+    public partial class EksEntities : DbContext
     {
-        public EksEntities1()
-            : base("name=EksEntities1")
+        public EksEntities()
+            : base("name=EksEntities")
         {
         }
     

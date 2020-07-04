@@ -12,10 +12,10 @@
           <Property Name="id" Type="int" Nullable="false" />
           <Property Name="idAuto" Type="nvarchar(max)" />
           <Property Name="Model" Type="nvarchar(max)" />
-          <Property Name="Color" Type="nvarchar(max)" />
-          <Property Name="Price" Type="nvarchar(max)" />
+          <Property Name="Color" Type="int" />
+          <Property Name="Price" Type="int" />
           <Property Name="Number" Type="nvarchar(max)" />
-          <Property Name="Release" Type="nvarchar(max)" />
+          <Property Name="Release" Type="datetime" />
         </EntityType>
         <EntityType Name="Buyer">
           <Key>
@@ -137,10 +137,10 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="idAuto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Color" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="Int32" />
+          <Property Name="Price" Type="Int32" />
           <Property Name="Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Release" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Release" Type="DateTime" Precision="3" />
           <NavigationProperty Name="main" Relationship="Self.FK_main_Auto" FromRole="Auto" ToRole="main" />
         </EntityType>
         <EntityType Name="Buyer">
@@ -236,7 +236,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EksEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EksEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Auto" EntityType="Self.Auto" />
           <EntitySet Name="Buyer" EntityType="Self.Buyer" />
           <EntitySet Name="Login" EntityType="Self.Login" />
@@ -261,7 +261,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище EksModelContainer" CdmEntityContainer="EksEntities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище EksModelContainer" CdmEntityContainer="EksEntities">
           <EntitySetMapping Name="Auto">
             <EntityTypeMapping TypeName="EksModel.Auto">
               <MappingFragment StoreEntitySet="Auto">
