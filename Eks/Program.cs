@@ -8,6 +8,7 @@ namespace Eks
 {
     static class Program
     {
+        public static EksEntities1 eks = new EksEntities1();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

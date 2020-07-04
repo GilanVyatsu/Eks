@@ -16,5 +16,12 @@ namespace Eks
         {
             InitializeComponent();
         }
+
+        private void buttonRegistr_Click(object sender, EventArgs e)
+        {
+            Registr registr = new Registr();
+            registr.Login = textBoxLogin.Text;
+            registr.Password = textBoxPassword.Text;
+        }
     }
 }

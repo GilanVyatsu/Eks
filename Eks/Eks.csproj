@@ -61,11 +61,35 @@
     <Compile Include="Buyer.cs">
       <DependentUpon>ModelEks.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuto.Designer.cs">
+      <DependentUpon>FormAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuyer.Designer.cs">
+      <DependentUpon>FormBuyer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagers.Designer.cs">
+      <DependentUpon>FormManagers.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegistr.cs">
       <SubType>Form</SubType>
@@ -102,8 +126,14 @@
     <Compile Include="Registr.cs">
       <DependentUpon>ModelEks.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormBuyer.resx">
+      <DependentUpon>FormBuyer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistr.resx">
       <DependentUpon>FormRegistr.cs</DependentUpon>

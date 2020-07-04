@@ -30,16 +30,17 @@
         {
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonRegistr = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelWelcom = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(213)))), ((int)(((byte)(202)))));
+            this.buttonLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogin.Location = new System.Drawing.Point(128, 235);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(126, 61);
@@ -51,6 +52,7 @@
             // buttonRegistr
             // 
             this.buttonRegistr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(213)))), ((int)(((byte)(202)))));
+            this.buttonRegistr.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRegistr.Location = new System.Drawing.Point(380, 235);
             this.buttonRegistr.Name = "buttonRegistr";
             this.buttonRegistr.Size = new System.Drawing.Size(126, 61);
@@ -59,19 +61,19 @@
             this.buttonRegistr.UseVisualStyleBackColor = false;
             this.buttonRegistr.Click += new System.EventHandler(this.buttonRegistr_Click);
             // 
-            // textBox1
+            // textBoxLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxLogin.Location = new System.Drawing.Point(128, 137);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(135, 20);
+            this.textBoxLogin.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(128, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxPassword.Location = new System.Drawing.Point(128, 194);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(135, 20);
+            this.textBoxPassword.TabIndex = 3;
             // 
             // label1
             // 
@@ -91,15 +93,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Пароль";
             // 
-            // label3
+            // labelWelcom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(85, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 29);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Добро пожаловать!";
+            this.labelWelcom.AutoSize = true;
+            this.labelWelcom.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWelcom.Location = new System.Drawing.Point(85, 41);
+            this.labelWelcom.Name = "labelWelcom";
+            this.labelWelcom.Size = new System.Drawing.Size(217, 29);
+            this.labelWelcom.TabIndex = 6;
+            this.labelWelcom.Text = "Добро пожаловать!";
             // 
             // FormLogin
             // 
@@ -107,11 +109,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(169)))), ((int)(((byte)(175)))));
             this.ClientSize = new System.Drawing.Size(538, 360);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelWelcom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.buttonRegistr);
             this.Controls.Add(this.buttonLogin);
             this.Name = "FormLogin";
@@ -125,11 +127,11 @@
 
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonRegistr;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelWelcom;
     }
 }
 
